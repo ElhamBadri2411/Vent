@@ -7,14 +7,12 @@ const Form = () => {
   const [formMessage, setFormMessage] = useState({
     title: "",
     message: "",
-    author: "",
   });
 
   const clear = () => {
     setFormMessage({
       title: "",
-      message: "",
-      author: "",
+      message: ""
     });
   };
 
@@ -48,6 +46,7 @@ const Form = () => {
           setFormMessage({ ...formMessage, message: e.target.value })
         }
         value={formMessage.message}
+        label="Message"
       />
 
       <Button type="submit" value="Submit">Submit</Button>

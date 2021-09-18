@@ -7,8 +7,7 @@ const messageSchema = mongoose.Schema({
     timePosted: {
         type: Date,
         default: new Date()
-    },
-    author: String
+    }
 })
 
 // model in database
