@@ -1,11 +1,14 @@
 import ViewMessage from './components/ViewMessage.jsx'
 import Form from './Form/Form.jsx'
+import { Paper } from "@mui/material";
 
 function App() {
   return (
     <div align="center">
-      <Form />
-      <ViewMessage />
+      <Paper>
+        <Form />
+        <ViewMessage />
+      </Paper>
     </div>
   );
 }
