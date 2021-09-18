@@ -19,10 +19,11 @@ const Form = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("running")
-    if ((formMessage.message = "")) {
+
+    if (formMessage.message === "") {
       console.log("empty message");
     } else {
-      createMessage({ formMessage });
+      createMessage(formMessage);
     }
   };
 
