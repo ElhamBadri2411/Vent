@@ -16,13 +16,13 @@ export const getMessage = async (req, res) => { // function that gets a random m
 }
 
 export const createMessage = async (req, res) => { // function that gets creates a message and stores it in the database
-    const { title, message, author} = req.body;
+    const {title, message} = req.body;
 
-    const newMessage = new Message({title, message, author});
+    const newMessage = new Message({title, message});
 
     try {
         await newMessage.save();
-
+        console.log("saved message");
         res.status(201).json(newMessage);
     } catch (error) {
         res.status(409).json({message: error.message});
