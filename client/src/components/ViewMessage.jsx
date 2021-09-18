@@ -1,6 +1,7 @@
 import { Button } from "@mui/material";
 import React from "react";
 import { getMessage } from "../api/api";
+import RenderMessage from "./RenderMessage";
 
 
 class ViewMessage extends React.Component {
@@ -35,12 +36,9 @@ class ViewMessage extends React.Component {
                     View Post
                 </Button>
                 <br />
+                <br />
                 {message &&
-                    <>
-                        {message.title}
-                        <br />
-                        {message.message}
-                    </>
+                    <RenderMessage message={message} />
                 }
             </>
         )
