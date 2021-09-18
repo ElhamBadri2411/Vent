@@ -3,14 +3,18 @@ import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
 
+import messageRoutes from './routes/messagesRoutes.js';
+
 const app = express();
 
 app.use(express.json({ limit: "30mb", extended: true }));
 app.use(express.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
+app.use("/message", messageRoutes);
+
 const CONNECTION_URL = 'mongodb+srv://VentHacktheNorth:VentHacktheNorth12345@cluster0.cvye3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, {
     useNewUrlParser: true,
