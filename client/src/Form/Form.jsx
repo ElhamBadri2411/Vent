@@ -20,10 +20,11 @@ const Form = () => {
     e.preventDefault();
     console.log("running")
 
-    if (formMessage.message === "") {
-      console.log("empty message");
+    if (formMessage.message === "" || formMessage.title === "") {
+      console.log("empty message/title");
     } else {
       createMessage(formMessage);
+      clear()
     }
   };
 
