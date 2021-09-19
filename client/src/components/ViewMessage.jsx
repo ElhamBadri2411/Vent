@@ -32,7 +32,8 @@ class ViewMessage extends React.Component {
 
         return (
             <>
-                <Button variant="contained" onClick={()=>{this.getNewMessage()}}>
+                <Button variant="contained" onClick={()=>{this.getNewMessage()}}
+                style={{backgroundColor: "#404040", color: "#fff"}}>
                     View Post
                 </Button>
                 <br />

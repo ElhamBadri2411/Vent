@@ -67,8 +67,8 @@ const Form = () => {
 
       <br />
       <br />
-      <Button type="submit" value="Submit">Submit</Button>
-      <Button onClick={clear}>clear</Button>
+      <Button variant="outlined" type="submit" value="Submit" style={{marginRight: '1em', color: '#404040', borderColor: '#404040'}}>Submit</Button>
+      <Button onClick={clear} style={{marginLeft: '1em', color: '#404040'}}>clear</Button>
     </form>
     </Card>
   );
