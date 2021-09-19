@@ -13,7 +13,7 @@ app.use(cors());
 
 app.use("/message", messageRoutes);
 
-const CONNECTION_URL = 'mongodb+srv://VentHacktheNorth:VentHacktheNorth12345@cluster0.cvye3.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
+const CONNECTION_URL = process.env.DB_URL
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, {
