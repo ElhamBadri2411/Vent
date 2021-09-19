@@ -36,7 +36,7 @@ const Form = () => {
       <Typography variant="h1" style={{display: 'inline-block'}}>V E N T</Typography>
       <Vent />
       <br/>
-      <Typography variant="body1">Use this website to vent about whatever is in your mind, or confess your deepest darkest secrets. Click "View Post" to view a post another user </Typography>
+      <Typography variant="body1">Use this website to vent about whatever is in your mind, or confess your deepest darkest secrets. Click "View Post" to view a post another user made.</Typography>
       <br />
       <br />
       <div style={{width: "80%"}}>
