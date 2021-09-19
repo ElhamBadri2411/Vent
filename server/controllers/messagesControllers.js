@@ -1,4 +1,4 @@
-import Message from '../models/Message.js';
+import Message from '../models/message.js';
 import mongoose from 'mongoose';
 import express from 'express';
 
