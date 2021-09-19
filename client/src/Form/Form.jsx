@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { createMessage } from "../api/api.js";
 import { TextField, Button, Card, Typography } from "@mui/material/";
+import Vent from "../components/Vent.jsx";
 
 const Form = () => {
   const [formMessage, setFormMessage] = useState({
@@ -31,7 +32,11 @@ const Form = () => {
   return (
     <Card elevation={12} style={{width: "75%", padding: "2em"}}>
     <form autocomplete="on" onSubmit={handleSubmit}>
-      <Typography variant="h1">Vent</Typography>
+      <Vent />
+      <Typography variant="h1" style={{display: 'inline-block'}}>V E N T</Typography>
+      <Vent />
+      <br/>
+      <Typography variant="body1">Use this website to vent about whatever is in your mind, or confess your deepest darkest secrets. Click "View Post" to view a post another user </Typography>
       <br />
       <br />
       <div style={{width: "80%"}}>
