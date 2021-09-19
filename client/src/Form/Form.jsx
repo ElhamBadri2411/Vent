@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { createMessage } from "../api/api.js";
-import { TextField, Button, Paper, Typography } from "@mui/material/";
+import { TextField, Button, Card, Typography } from "@mui/material/";
 
 const Form = () => {
   const [formMessage, setFormMessage] = useState({
@@ -29,21 +29,24 @@ const Form = () => {
   };
 
   return (
+    <Card elevation={12} style={{width: "75%", padding: "2em"}}>
     <form autocomplete="on" onSubmit={handleSubmit}>
-      <Typography variant="h2">Vent</Typography>
+      <Typography variant="h1">Vent</Typography>
       <br />
       <br />
-      <TextField
-        name="title"
-        onChange={(e) =>
-          setFormMessage({ ...formMessage, title: e.target.value })
-        }
-        value={formMessage.title}
-        label="Title"
-      />
+      <div style={{width: "80%"}}>
+        <TextField
+          name="title"
+          onChange={(e) =>
+            setFormMessage({ ...formMessage, title: e.target.value })
+          }
+          fullWidth
+          value={formMessage.title}
+          label="Title"
+        />
       <br />
       <br />
-
+      
       <TextField
         name="message"
         onChange={(e) =>
@@ -52,13 +55,17 @@ const Form = () => {
         value={formMessage.message}
         multiline
         minRows={5}
+        fullWidth
         label="Message"
       />
+      </div>
+
       <br />
       <br />
       <Button type="submit" value="Submit">Submit</Button>
       <Button onClick={clear}>clear</Button>
     </form>
+    </Card>
   );
 };
 

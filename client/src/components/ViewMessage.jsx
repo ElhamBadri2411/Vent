@@ -32,7 +32,7 @@ class ViewMessage extends React.Component {
 
         return (
             <>
-                <Button onClick={()=>{this.getNewMessage()}}>
+                <Button variant="contained" onClick={()=>{this.getNewMessage()}}>
                     View Post
                 </Button>
                 <br />
